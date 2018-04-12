@@ -13,7 +13,15 @@
         <h2 data-bind="text: name"></h2>
         <h3 data-bind="text: level"></h3>
         <div data-bind="text: clickCount"></div>
-        <img src="" alt="cute cat" data-bind="click: incrementCounter, attr: {src: imgSrc}">
+        <div>
+            <img src="" alt="cute cat" data-bind="click: incrementCounter, attr: {src: imgSrc}">
+        </div>
+        <h4>Nicknames:</h4>
+        <ul data-bind="foreach: nicknames">
+            <li>
+                <span data-bind="text: name"> </span>
+            </li>
+        </ul>
 
     </div>
     <script src="js/lib/knockout-3.2.0.js"></script>
